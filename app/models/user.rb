@@ -6,5 +6,9 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :name
 
+  def answered_questions
+    self.answers.map {|ans| ans.question_id}
+  end
+
 
 end
