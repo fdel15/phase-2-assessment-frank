@@ -137,3 +137,11 @@ ul .columns {
   width: 30%;
   text-align: center;
 }
+
+/*##############################
+Test Views
+##############################*/
+
+.edit_wrapper {
+  display: none;
+}

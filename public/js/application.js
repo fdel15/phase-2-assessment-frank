@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // ***********************
+// ***********************
 // auth/login
 // ***********************
   $('#login_wrapper button').mouseenter(function() {
@@ -41,5 +41,38 @@ $(document).ready(function() {
   })
 
 });
+
+// ***********************
+// tests/single
+// ***********************
+
+// Edit form
+
+  $('.question').on('click', 'button.edit_answer', function(event) {
+
+    event.preventDefault();
+    var $target = $(event.target)
+    console.log('click')
+    // console.log($target)
+    console.log($target.closest('.question').children())
+
+    $target.closest('.question').children('.edit_wrapper').show();
+
+  });
+  // $('.test_answer').on('submit', 'form.edit_form', function (event) {
+
+  //   event.preventDefault();
+
+  //   var $target = $(event.target);
+
+  //   $.ajax({
+  //     url: $target.attr('action'),
+  //     type: 'PUT',
+  //     data: $target.serialize(),
+  //   }).done(function (response) {
+  //     $target.closest('.task').replaceWith(response);
+  //   })
+
+  // })
 
 });
