@@ -1,0 +1,9 @@
+<p class="question_content">
+  <%= question.content %>
+</p>
+
+<form action="/answer" method="POST">
+  <textarea name="answer[content]" rows='5' cols='50' placeholder="Enter Your Answer Here"></textarea>
+  <input type="hidden" name="answer[question_id" value="<%= question.id %>">
+  <p><input type="submit"></p>
+</form>
