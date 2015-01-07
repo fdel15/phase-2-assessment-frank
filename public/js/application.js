@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
 
 
-  $('#login_button').on('click', function (event) {
+   $('#login_button').on('click', function (event) {
 
   event.preventDefault();
 
@@ -25,8 +25,9 @@ $(document).ready(function() {
     $target.closest('button').replaceWith(response);
   })
 
+});
 
-   $('#signup_button').on('click', function (event) {
+  $('#signup_button').on('click', function (event) {
 
   event.preventDefault();
 
@@ -40,10 +41,5 @@ $(document).ready(function() {
   })
 
 });
-
-});
-
-
-
 
 });
