@@ -2,9 +2,4 @@
   <%= question.content %>
 </p>
 
-<form action="/test/answer" method="POST">
-  <textarea name="answer[content]" rows='5' cols='50' placeholder="Enter Your Answer Here"></textarea>
-  <input type="hidden" name="answer[question_id]" value="<%= question.id %>">
- <!--  <input type="text" name="answer[content]"> -->
-  <p><input type="submit"></p>
-</form>
+<%= erb :'answers/new', locals: {question: question} %>
