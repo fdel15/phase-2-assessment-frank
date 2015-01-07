@@ -2,6 +2,6 @@
 
 <% tests.each do |test| %>
   <% if test.test_contributors.include?(current_user.id) %>
-      <li><a href="test/<%= test.id %>"><%= test.name %></a></li>
+      <li><a href="/test/<%= test.id %>"><%= test.name %></a></li>
   <% end%>
 <% end %>

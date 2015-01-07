@@ -1,0 +1,9 @@
+<% test.questions.each do |question| %>
+  <% if current_user.answered_questions.include?(question.id) %>
+    <p> Question answered! </p>
+  <% else %>
+    <li>
+      <%= erb :'questions/single_question', locals: {question: question} %>
+    </li>
+  <% end %>
+<% end %>
