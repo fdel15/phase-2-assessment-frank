@@ -25,6 +25,22 @@ $(document).ready(function() {
     $target.closest('button').replaceWith(response);
   })
 
+
+   $('#signup_button').on('click', function (event) {
+
+  event.preventDefault();
+
+  var $target = $(event.target);
+
+  $.ajax({
+    url: '/signup',
+    type: 'GET',
+  }).done(function (response) {
+    $target.closest('button').replaceWith(response);
+  })
+
+});
+
 });
 
 
