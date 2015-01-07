@@ -121,13 +121,14 @@ Index Page
   margin: 5%;
 }
 
-.columns {
-  padding: 0;
+ul .columns {
+  margin: auto;
+  padding: 0 2%;
 }
 
 .columns li {
   display: inline-block;
   list-style: none;
   width: 30%;
-  text-align: center
+  text-align: center;
 }
