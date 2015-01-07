@@ -12,3 +12,8 @@ post '/question' do
     redirect '/question/new'
   end
 end
+
+get '/question/:id' do |id|
+  question = Question.find(id)
+  erb :'questions/single_question', locals: {question: question}
+end
