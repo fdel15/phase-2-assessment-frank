@@ -53,9 +53,6 @@ $(document).ready(function() {
     event.preventDefault();
     var $target = $(event.target)
     console.log('click')
-    // console.log($target)
-    console.log($target.closest('.question').children())
-
     $target.closest('.question').children('.edit_wrapper').toggle();
 
   });
@@ -70,7 +67,9 @@ $(document).ready(function() {
       type: 'PUT',
       data: $target.serialize(),
     }).done(function (response) {
-      $target.closest('.question').replaceWith(response);
+      $target.closest('.question').children('.edit_wrapper').toggle();
+    }).fail(function (response) {
+      console.log("FAIL!")
     })
 
   })

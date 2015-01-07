@@ -3,7 +3,6 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
 
-  # has_many :questions, foreign_key: "question_id", class_name: "Question"
 
   def test_id
     self.question.test_id

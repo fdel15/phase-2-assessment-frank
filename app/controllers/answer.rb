@@ -16,10 +16,5 @@ end
 put '/answer/:id' do |id|
   answer = Answer.find(id)
   answer.update(params[:answer])
-  if request.xhr?
-    erb :'questions/single_question', locals: {question: answer.question}, layout: false
-  else
-    redirect "/test/#{answer.test_id}"
-  end
-  # redirect "/test/#{answer.test_id}"
+  redirect "/test/#{answer.test_id}"
 end

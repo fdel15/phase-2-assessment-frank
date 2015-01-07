@@ -28,7 +28,7 @@ APP_NAME = APP_ROOT.basename.to_s
 register do
     def auth(type)
       condition do
-        redirect ('/login') unless send("current_#{type}")
+        redirect ('/') unless send("current_#{type}")
       end
     end
   end

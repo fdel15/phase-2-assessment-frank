@@ -1,15 +1,19 @@
 <form action="/question" method="POST">
+
   Select a test:
   <select name="question[test_id]">
     <% session[:tests].each do |test| %>
   <option value="<%= test.id %>"><%= test.name %></option>
     <% end %>
-</select>
+  </select>
+
   <p>Question:
   <textarea rows="5" cols="40" name="question[content]"></textarea></p>
   <p>Correct Answer:
- <textarea rows="5" cols="40" name="question[correct_answer]"></textarea></p>
+  <textarea rows="5" cols="40" name="question[correct_answer]"></textarea></p>
+
   <p>References:
- <textarea rows="5" cols="40" name="question[references]"></textarea></p>
+  <textarea rows="5" cols="40" name="question[references]"></textarea></p>
+
   <input type="submit">
 </form>
