@@ -112,3 +112,22 @@ a {
   background-color: black;
   color: yellow;
 }
+
+/*##############################
+Index Page
+##############################*/
+
+.container {
+  margin: 5%;
+}
+
+.columns {
+  padding: 0;
+}
+
+.columns li {
+  display: inline-block;
+  list-style: none;
+  width: 30%;
+  text-align: center
+}
