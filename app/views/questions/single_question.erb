@@ -1,5 +1,15 @@
-<p class="question_content">
-  <%= question.content %>
-</p>
+ <div class="question">
+      <%= question.content %>
+      <% if current_user.answered_questions.include?(question.id) %>
 
-<%= erb :'answers/new', locals: {question: question} %>
+          <p>Question Answered!</p>
+
+          <div class="edit_wrapper">
+            <%= erb :'answers/edit', locals: {answer: answer_object(question)} %>
+          </div>
+
+          <button class='edit_answer'><a href="/answer/<%= answer_id(question) %>/edit">Edit Answer</a></button>
+      <% else %>
+        <%= erb :'answers/new', locals: {question: question} %>
+      <% end %>
+</div>
