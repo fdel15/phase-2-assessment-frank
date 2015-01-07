@@ -7,4 +7,8 @@ class Test < ActiveRecord::Base
   def test_contributors
     self.questions.map {|q| q.user.id}
   end
+
+  def test_answers
+    self.questions.map {|q| q.correct_answer}
+  end
 end

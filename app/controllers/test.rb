@@ -8,4 +8,8 @@ get '/test/:id' do |id|
   erb :'tests/single', locals: {test: test}
 end
 
+get '/test/:id/complete' do |id|
+  test = Test.find(id)
+end
+
 

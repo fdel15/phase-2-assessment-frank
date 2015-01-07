@@ -1,3 +1,5 @@
 <% test.questions.each do |question| %>
  <%= erb :'questions/single_question', locals: {question: question} %>
 <% end %>
+
+<button><a href="/test/<%= test.id %>/complete">Complete Test</a></button>
