@@ -56,23 +56,23 @@ $(document).ready(function() {
     // console.log($target)
     console.log($target.closest('.question').children())
 
-    $target.closest('.question').children('.edit_wrapper').show();
+    $target.closest('.question').children('.edit_wrapper').toggle();
 
   });
-  // $('.test_answer').on('submit', 'form.edit_form', function (event) {
+  $('.question').on('submit', 'form.edit_answer_form', function (event) {
 
-  //   event.preventDefault();
+    event.preventDefault();
 
-  //   var $target = $(event.target);
+    var $target = $(event.target);
 
-  //   $.ajax({
-  //     url: $target.attr('action'),
-  //     type: 'PUT',
-  //     data: $target.serialize(),
-  //   }).done(function (response) {
-  //     $target.closest('.task').replaceWith(response);
-  //   })
+    $.ajax({
+      url: $target.attr('action'),
+      type: 'PUT',
+      data: $target.serialize(),
+    }).done(function (response) {
+      $target.closest('.question').replaceWith(response);
+    })
 
-  // })
+  })
 
 });
