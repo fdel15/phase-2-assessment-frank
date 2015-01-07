@@ -1,5 +1,5 @@
 get '/' do
-  p current_user
+  session[:tests] = Test.all
   if current_user
     erb :'/index'
   else
